@@ -1,11 +1,6 @@
-Feature: I want to login into the site with valid data
+Feature: Register how new user in Website
 
-  Background: Navigate to the Website
-    Given I navigate to the Website
-
-  Scenario: Login as new sign up user with valid data
-    When I entered valid credential
-      | email                  | validpassword |
-      | lambdatest11@yopmail.com | lambdatest21    |
-    And User click on sign in button
-    Then Validate the title after login
+Scenario: Fill in the fields on the registration form and log in as a new user of the website
+  Given I am in page resgister 
+  When I click on the first name field
+  Then I write my first name
