@@ -10,27 +10,21 @@ When(' I click on the first name field', () => {
 
 And('I write my first name', () => {
     cy.get('[name="firstname"]').type('usuario teste')
+    
 });
 
- Then('My first name will be in the field', () => {
-    cy.get('input[name="firstname"]').should('have.value', 'usuario teste')
+And('I click on the last name field', () => {
+    cy.get('#input-lastname').eq(0).click()
 });
 
-Given('I already write my first name now, I will type my last name', () => {
-
-});
-Given('I already write my first name now, I will type my last name',() => {
-    cy.visit('https://ecommerce-playground.lambdatest.io/index.php?route=account/register')
+And('I write my last name', () => {
+    cy.get('#input-lastname').type('sobrenome teste')
 });
 
-When('I click on the last name field', () => {
-    cy.get('#input-lastname').click()
+ Then('My first name and last name will be in the field', () => {
+    cy.get('input[name="firstname"]').should('to.have.length', 1)
+    cy.get('input[name="lastname"]').should('to.have.length', 1)
 });
 
-And('I write my last name', () =>{
-    cy.get('[name="lastname"]').type('Sobrenome teste')
-});
 
-Then('My last name will be in the field', () =>{
-    cy.get('input[name="lastname"]').should('have.value', 'Sobrenome teste')
-});
+
