@@ -6,9 +6,9 @@ Given('I visit website', () => {
 });
 
 When(' I click on the first name field', () => {
+  
 
-        register.ClickField()
-    });
+});
 
 
 And('I write my first name', () => {
