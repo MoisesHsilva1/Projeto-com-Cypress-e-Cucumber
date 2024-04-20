@@ -14,3 +14,8 @@ Then('I fill in my first name {string}', (firstname) => {
 And('I fill in my last name {string}', (lastname) => {
    registerPage.filllastName(lastname);
 })
+
+Then ('I see my first name and last name filled in', (firstname, lastname) => {
+        registerPage.visibleFirstName(firstname);
+        registerPage.visibleLastName(lastname);
+})
