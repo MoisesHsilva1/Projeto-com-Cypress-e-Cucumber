@@ -1,15 +1,14 @@
 class RegisterPage {
-    enterURL() {
+    visit() {
         cy.visit('https://ecommerce-playground.lambdatest.io/index.php?route=account/register');
     }
- elements = {
-    firstnameInput : () => cy.get('[name="firstname"]'),
-    lastnameInput : () => cy.get('[name="lastname"]')
- }   
-   enterfirstname(firstnameInput) {
-    this.elements.lastnameInput().click();
-    
-   } 
+    fillfirstName(firstname) {
+        cy.get('[name="firstname"]').type(firstname)
+        return this;
+    }
+    filllastName(lastname) {
+        cy.get('[name="lastname"]').type(lastname)
+        return this;
+    }
 }
-const register = new RegisterPage();
-export default register
+export default RegisterPage;
