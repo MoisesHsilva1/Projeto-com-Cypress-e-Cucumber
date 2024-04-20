@@ -1,21 +1,23 @@
 import {Given, When, Then, And} from "cypress-cucumber-preprocessor/steps"
-import RegisterPage from "../../Pages/RegisterPage/RegisterPage.cy";
+import RegisterPageName from "../../Pages/RegisterPage/RegisterPageName.cy";
 
-const registerPage = new RegisterPage();
+const registerPageName = new RegisterPageName();
 
-Given('The user this visit website in Register page', () => {
-    registerPage.visit();
+Given('The user this visit website in register page', () => {
+    registerPageName.visit();
 });
 
 Then('I fill in my first name {string}', (firstname) => {   
-    registerPage.fillfirstName(firstname);
+    registerPageName.fillfirstName(firstname);
 }); 
 
 And('I fill in my last name {string}', (lastname) => {
-   registerPage.filllastName(lastname);
+   registerPageName.filllastName(lastname);
 })
 
 Then ('I see my first name and last name filled in', (firstname, lastname) => {
-        registerPage.visibleFirstName(firstname);
-        registerPage.visibleLastName(lastname);
+        registerPageName.visibleFirstName(firstname);
+        registerPageName.visibleLastName(lastname);
 })
+
+

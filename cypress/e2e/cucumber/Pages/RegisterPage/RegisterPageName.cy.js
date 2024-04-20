@@ -1,4 +1,4 @@
-class RegisterPage {
+class RegisterPageName {
     visit() {
         cy.visit('https://ecommerce-playground.lambdatest.io/index.php?route=account/register');
     }
@@ -18,5 +18,8 @@ class RegisterPage {
         cy.get('[name="lastname"]').should('be.visible');
         return this;
     }
+    fillemail(email) {
+        cy.get('[name="email"]').type(email)
+    }
 }
-export default RegisterPage;
+export default RegisterPageName;
