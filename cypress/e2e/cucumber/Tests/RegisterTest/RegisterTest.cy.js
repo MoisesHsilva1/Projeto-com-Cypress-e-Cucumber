@@ -3,7 +3,7 @@ import RegisterPage from "../../Pages/RegisterPage/RegisterPage.cy";
 
 const registerPage = new RegisterPage();
 
-Given('I visit website', () => {
+Given('The user this visit website in Register page', () => {
     registerPage.visit();
 });
 
