@@ -1,13 +1,12 @@
-Feature: Register names of user
+Feature: User Registration
 
-Scenario: Make register complete of user
-   Given The user this visit website in register page
-   When I fill in my first name "pedro"
-   And I fill in my last name "junior"
-   Then I see my first name and last name filled in
-
-   When I fill in my email "emailteste@gmail.com" in field
-   Then I See my email filled in
-
-   When Fill your telephone "11234567891" in field
-   Then See your telephone in
+Scenario: Completing user registration
+   Given the user is on the registration page
+   When the user fills in their first name as "Pedro"
+   And the user fills in their last name as "Junior"
+   And the user fills in their email as "emailteste@gmail.com"
+   And the user fills in their telephone number as "11234567891"
+   Then the user should see their first name displayed
+   And the user should see their last name displayed
+   And the user should see their email displayed
+   And the user should see their telephone number displayed

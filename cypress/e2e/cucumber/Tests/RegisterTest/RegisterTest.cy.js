@@ -7,38 +7,42 @@ const pageName = new PageName();
 const pageEmail = new PageEmail();
 const pageTelephone = new PageTelephone();
 
-Given('The user this visit website in register page', () => {
+Given('the user is on the registration page', () => {
     pageName.visit();
 });
 
-Then('I fill in my first name {string}', (firstname) => {   
+When('the user fills in their first name as {string}', (firstname) => {   
     pageName.fillfirstName(firstname);
 }); 
 
-Then ('I see my first name and last name filled in', (firstname, lastname) => {
-    pageName.visibleFirstName(firstname);
-    pageName.visibleLastName(lastname);
-})
-
-And('I fill in my last name {string}', (lastname) => {
+And('the user fills in their last name as {string}', (lastname) => {
    pageName.filllastName(lastname);
-})
+});
 
-When('I fill in my email {string} in field', (email) => {
+And('the user fills in their email as {string}', (email) => {
     pageEmail.fillEmail(email);
 })
 
-Then('I See my email filled in', (email) => {
-    pageEmail.seeEmail(email);
-})
-
-When('Fill your telephone {string} in field', (telephone) => {
+And('the user fills in their telephone number as {string}', (telephone) => {
     pageTelephone.fillNumber(telephone);
 })
 
-Then('See your telephone in', (telephone) => {
+Then ('the user should see their first name displayed', (firstname) => {
+    pageName.visibleFirstName(firstname);
+});
+
+And ('the user should see their last name displayed', (lastname) => {
+    pageName.visibleLastName(lastname);
+});
+
+And('the user should see their email displayed', (email) => {
+    pageEmail.seeEmail(email);
+})
+
+And('the user should see their telephone number displayed', (telephone) => {
     pageTelephone.seeNumber(telephone);
 })
+
 
 
 
