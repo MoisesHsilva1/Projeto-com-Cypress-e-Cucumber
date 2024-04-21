@@ -7,7 +7,7 @@ Scenario: Make register complete of user
    Then I see my first name and last name filled in
 
    When I fill in my email "emailteste@gmail.com" in field
-   Then See your email filled in
+   Then I See my email filled in
 
    When Fill your telephone "11234567891" in field
    Then See your telephone in

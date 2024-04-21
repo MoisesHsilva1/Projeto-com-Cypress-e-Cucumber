@@ -1,4 +1,4 @@
-class RegisterPageTelephone {
+class PageTelephone {
     fillNumber(telephone) {
         cy.get('[name="telephone"]').type(telephone);
         return this;
@@ -8,4 +8,4 @@ class RegisterPageTelephone {
         return this;
     }
 }
-export default RegisterPageTelephone;
+export default PageTelephone;

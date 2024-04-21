@@ -1,4 +1,4 @@
-class RegisterPageName {
+class PageName {
     visit() {
         cy.visit('https://ecommerce-playground.lambdatest.io/index.php?route=account/register');
     }
@@ -19,4 +19,4 @@ class RegisterPageName {
         return this;
     }
 }
-export default RegisterPageName;
+export default PageName;

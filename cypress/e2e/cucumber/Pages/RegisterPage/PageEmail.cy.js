@@ -1,4 +1,4 @@
-class RegisterPageEmail {
+class PageEmail {
     fillEmail(email) {
         cy.get('[name="email"]').type(email);
         return this;
@@ -8,4 +8,4 @@ class RegisterPageEmail {
         return this;
     }
 }
-export default RegisterPageEmail;
+export default PageEmail;
