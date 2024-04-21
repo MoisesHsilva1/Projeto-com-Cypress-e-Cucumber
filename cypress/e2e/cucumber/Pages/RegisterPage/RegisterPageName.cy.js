@@ -18,8 +18,5 @@ class RegisterPageName {
         cy.get('[name="lastname"]').should('be.visible');
         return this;
     }
-    fillemail(email) {
-        cy.get('[name="email"]').type(email)
-    }
 }
 export default RegisterPageName;
