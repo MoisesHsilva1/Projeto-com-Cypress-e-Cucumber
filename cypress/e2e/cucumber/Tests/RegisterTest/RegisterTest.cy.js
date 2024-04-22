@@ -33,6 +33,10 @@ And('the user fills in their passaword as {string}', (password) => {
     pagepassword.FillPassword(password);
 })
 
+And ('the user fills in their confirm passaword as {string}', (confirm) => {
+    pagepassword.ConfirmPassword(confirm);
+})
+
 Then ('the user should see their first name displayed', (firstname) => {
     pageName.visibleFirstName(firstname);
 });
@@ -48,6 +52,16 @@ And('the user should see their email displayed', (email) => {
 And('the user should see their telephone number displayed', (telephone) => {
     pageTelephone.seeNumber(telephone);
 })
+
+And('the user should see their pa   ssaword displayed', (password) => { 
+    pagepassword.SeePassword(password);
+})
+
+And('the user should see their confirm passaword displayed', (confirm) => {
+    pagepassword.SeeConfirmPassword(confirm);
+})
+
+
 
 
 
