@@ -2,10 +2,12 @@ import {Given, When, Then, And} from "cypress-cucumber-preprocessor/steps"
 import PageName from "../../Pages/RegisterPage/PageName.cy";
 import PageEmail from "../../Pages/RegisterPage/PageEmail.cy";
 import PageTelephone from "../../Pages/RegisterPage/PageTelephone.cy";
+import PagePassword from "../../Pages/RegisterPage/PagePassword.cy";
 
 const pageName = new PageName();
 const pageEmail = new PageEmail();
 const pageTelephone = new PageTelephone();
+const pagepassword = new PagePassword();
 
 Given('the user is on the registration page', () => {
     pageName.visit();
@@ -25,6 +27,10 @@ And('the user fills in their email as {string}', (email) => {
 
 And('the user fills in their telephone number as {string}', (telephone) => {
     pageTelephone.fillNumber(telephone);
+})
+
+And('the user fills in their passaword as {string}', (password) => {
+    pagepassword.FillPassword(password);
 })
 
 Then ('the user should see their first name displayed', (firstname) => {
