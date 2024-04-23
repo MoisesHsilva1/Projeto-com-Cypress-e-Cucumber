@@ -3,11 +3,13 @@ import PageName from "../../Pages/RegisterPage/PageName.cy";
 import PageEmail from "../../Pages/RegisterPage/PageEmail.cy";
 import PageTelephone from "../../Pages/RegisterPage/PageTelephone.cy";
 import PagePassword from "../../Pages/RegisterPage/PagePassword.cy";
+import SubcribeYES from "../../Pages/RegisterPage/PageSubscribeYes.cy";
 
 const pageName = new PageName();
 const pageEmail = new PageEmail();
 const pageTelephone = new PageTelephone();
 const pagepassword = new PagePassword();
+const pageSubscribeYes = new SubcribeYES();
 
 Given('the user is on the registration page', () => {
     pageName.visit();
@@ -35,6 +37,10 @@ And('the user fills in their passaword as {string}', (password) => {
 
 And ('the user fills in their confirm passaword as {string}', (confirm) => {
     pagepassword.ConfirmPassword(confirm);
+})
+
+And('the user select Newsletter how yes', () => {
+    pageSubscribeYes.SelectYes();
 })
 
 Then ('the user should see their first name displayed', (firstname) => {

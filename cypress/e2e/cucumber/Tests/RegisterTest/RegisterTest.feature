@@ -8,6 +8,7 @@ Scenario: Completing user registration
    And the user fills in their telephone number as "11234567891"
    And the user fills in their passaword as "12345678"
    And the user fills in their confirm passaword as "12345678"
+   And the user select Newsletter how yes
    Then the user should see their first name displayed
    And the user should see their last name displayed
    And the user should see their email displayed
