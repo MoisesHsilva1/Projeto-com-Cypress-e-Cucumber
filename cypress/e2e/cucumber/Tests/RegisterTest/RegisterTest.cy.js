@@ -41,11 +41,11 @@ And ('the user fills in their confirm passaword as {string}', (confirm) => {
     pagepassword.ConfirmPassword(confirm);
 })
 
-And('the user select Newsletter how yes', () => {
+And('the user select Newsletter how yes and see their displayed', () => {
     pageSubscribeYes.SelectYes();
 })
 
-And('the user select Newsletter how no', () => {
+And('the user select Newsletter how no and see their displayed', () => {
     pageSubscribeNo.SelectNo()
 })
 
