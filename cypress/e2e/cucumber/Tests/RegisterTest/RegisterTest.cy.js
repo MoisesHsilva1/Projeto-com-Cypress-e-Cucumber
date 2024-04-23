@@ -45,6 +45,10 @@ And('the user select Newsletter how yes', () => {
     pageSubscribeYes.SelectYes();
 })
 
+And('the user select Newsletter how no', () => {
+    pageSubscribeNo.SelectNo()
+})
+
 Then ('the user should see their first name displayed', (firstname) => {
     pageName.visibleFirstName(firstname);
 });
