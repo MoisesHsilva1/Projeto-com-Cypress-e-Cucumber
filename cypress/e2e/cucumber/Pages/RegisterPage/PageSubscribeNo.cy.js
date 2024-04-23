@@ -1,6 +1,6 @@
-class PageSubscribeNo {
+class SubscribeNo {
     SelectNo () {
         cy.get('#input-newsletter-no').click({ force: true})
     }
 }
-export default PageSubscribeNo;
+export default SubscribeNo;

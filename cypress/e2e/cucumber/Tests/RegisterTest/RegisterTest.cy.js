@@ -3,13 +3,15 @@ import PageName from "../../Pages/RegisterPage/PageName.cy";
 import PageEmail from "../../Pages/RegisterPage/PageEmail.cy";
 import PageTelephone from "../../Pages/RegisterPage/PageTelephone.cy";
 import PagePassword from "../../Pages/RegisterPage/PagePassword.cy";
-import SubcribeYES from "../../Pages/RegisterPage/PageSubscribeYes.cy";
+import SubscribeYES from "../../Pages/RegisterPage/PageSubscribeYes.cy";
+import SubscribeNo from "../../Pages/RegisterPage/PageSubscribeNo.cy";
 
 const pageName = new PageName();
 const pageEmail = new PageEmail();
 const pageTelephone = new PageTelephone();
 const pagepassword = new PagePassword();
-const pageSubscribeYes = new SubcribeYES();
+const pageSubscribeYes = new SubscribeYES();
+const pageSubscribeNo = new SubscribeNo();
 
 Given('the user is on the registration page', () => {
     pageName.visit();
