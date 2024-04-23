@@ -17,4 +17,4 @@ Scenario: Completing user registration
    And the user should see their passaword displayed
    And the user should see their confirm passaword displayed
    And the user should see the newsletter field as yes displayed
-   And the user should see the newsletter field as no displayedB
+   And the user should see the newsletter field as no displayed
