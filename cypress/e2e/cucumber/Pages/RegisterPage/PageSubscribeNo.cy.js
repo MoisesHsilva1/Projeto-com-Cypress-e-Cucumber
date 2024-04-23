@@ -1,10 +1,7 @@
 class SubscribeNo {
     SelectNo () {
-        cy.get('#input-newsletter-no').click({ force: true});
+        cy.get('#input-newsletter-no').click({ force: true}).should('have.focus')
         return this;
-    }
-    VisibleSelectNO() {
-        cy.get('#i#input-newsletter-no').should('be.visible')        
     }
 }
 export default SubscribeNo;

@@ -8,13 +8,11 @@ Scenario: Completing user registration
    And the user fills in their telephone number as "11234567891"
    And the user fills in their passaword as "12345678"
    And the user fills in their confirm passaword as "12345678"
-   And the user select Newsletter how yes
-   And the user select Newsletter how no
+   And the user select Newsletter how yes and see their displayed
+   And the user select Newsletter how no and see their displayed
    Then the user should see their first name displayed
    And the user should see their last name displayed
    And the user should see their email displayed
    And the user should see their telephone number displayed
    And the user should see their passaword displayed
    And the user should see their confirm passaword displayed
-   And the user should see the newsletter field as yes displayed
-   And the user should see the newsletter field as no displayed

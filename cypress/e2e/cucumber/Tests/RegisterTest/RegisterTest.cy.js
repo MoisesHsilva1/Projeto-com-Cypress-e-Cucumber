@@ -72,9 +72,7 @@ And('the user should see their pa   ssaword displayed', (password) => {
 And('the user should see their confirm passaword displayed', (confirm) => {
     pagepassword.SeeConfirmPassword(confirm);
 })
-And(' And the user should see the newsletter field as yes displayed', () => {
-    pageSubscribeYes.VisibleSelectYes();
-})
+
 
 
 
