@@ -16,3 +16,4 @@ Scenario: Completing user registration
    And the user should see their telephone number displayed
    And the user should see their passaword displayed
    And the user should see their confirm passaword displayed
+ And
