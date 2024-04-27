@@ -1,7 +1,6 @@
 class CheckPrivacyPolicy {
     CheckYesPrivacyPolicy () {
-        cy.get('agree').click({force: true})
-        return this;
+        cy.get( 'input[type="checkbox"').click(1)
     } 
 }
 export default CheckPrivacyPolicy;
