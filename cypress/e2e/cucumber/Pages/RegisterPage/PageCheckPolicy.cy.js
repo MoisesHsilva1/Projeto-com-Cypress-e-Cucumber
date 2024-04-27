@@ -1,5 +1,7 @@
 class CheckPrivacyPolicy {
-    CheckYesPrivacyPolivy () {
-        
+    CheckYesPrivacyPolicy () {
+        cy.get('agree').click({force: true})
+        return this;
     } 
 }
+export default CheckPrivacyPolicy;

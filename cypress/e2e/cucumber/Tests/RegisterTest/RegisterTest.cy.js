@@ -5,6 +5,7 @@ import PageTelephone from "../../Pages/RegisterPage/PageTelephone.cy";
 import PagePassword from "../../Pages/RegisterPage/PagePassword.cy";
 import SubscribeYES from "../../Pages/RegisterPage/PageSubscribeYes.cy";
 import SubscribeNo from "../../Pages/RegisterPage/PageSubscribeNo.cy";
+import CheckPrivacyPolicy from "../../Pages/RegisterPage/PageCheckPolicy.cy";
 
 const pageName = new PageName();
 const pageEmail = new PageEmail();
@@ -12,6 +13,7 @@ const pageTelephone = new PageTelephone();
 const pagepassword = new PagePassword();
 const pageSubscribeYes = new SubscribeYES();
 const pageSubscribeNo = new SubscribeNo();
+const checkPrivacyPolicy = new CheckPrivacyPolicy();
 
 Given('the user is on the registration page', () => {
     pageName.visit();
@@ -47,6 +49,10 @@ And('the user select Newsletter how yes and see their displayed', () => {
 
 And('the user select Newsletter how no and see their displayed', () => {
     pageSubscribeNo.SelectNo()
+})
+
+And('the user check in field of accept privacy policy ', () => {
+    checkPrivacyPolicy.CheckYesPrivacyPolicy()
 })
 
 Then ('the user should see their first name displayed', (firstname) => {
